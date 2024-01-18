@@ -11,7 +11,7 @@ def rmdirs(top, deldirs):
     for root, dirs, files in os.walk(top, topdown=False):
         for name in dirs:
             if name in deldirs:
-                print(root, "/", name)
+                print(root, "/", name, sep="")
                 shutil.rmtree(os.path.join(root, name), ignore_errors=True)
 
 
